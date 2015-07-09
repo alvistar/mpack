@@ -1,9 +1,13 @@
 import platform
 
-Import('env', 'CPPFLAGS', 'LINKFLAGS')
+Import('env', 'CPPFLAGS', 'CFLAGS', 'LINKFLAGS')
 
-srcs = env.Object(env.Glob('src/mpack/*.c') + env.Glob('test/*.c'),
-        CPPFLAGS=env['CPPFLAGS'] + CPPFLAGS)
+srcs = env.Object(
+        env.Glob('src/mpack/*.c') +
+        env.Glob('bindings/cxx/*.cpp') +
+        env.Glob('test/*.c') +
+        env.Glob('test/*.cpp'),
+        CPPFLAGS=env['CPPFLAGS'] + CPPFLAGS, CFLAGS=CFLAGS)
 
 prog = env.Program("mpack-test", srcs,
         LINKFLAGS=env['LINKFLAGS'] + LINKFLAGS)

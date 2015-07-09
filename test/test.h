@@ -55,6 +55,9 @@
 #endif
 
 #include "mpack/mpack.h"
+#ifdef __cplusplus
+#include "mpack/mpack-cxx.h"
+#endif
 
 #ifdef __cplusplus
 extern "C" {
