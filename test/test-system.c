@@ -21,7 +21,9 @@
 
 // We need to include test.h here instead of test-system.h because
 // test-system.h is included within the mpack-config.h.
+
 #include "test.h"
+#include "test-system.h"
 
 #if MPACK_STDIO
 #include <errno.h>

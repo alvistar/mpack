@@ -19,6 +19,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+#include "mbed-drivers/mbed.h"
 #include "test.h"
 
 #include <string.h>
@@ -27,12 +28,10 @@
 #include "test-reader.h"
 #include "test-expect.h"
 #include "test-write.h"
-#include "test-buffer.h"
+//#include "test-buffer.h"
 #include "test-common.h"
 #include "test-node.h"
-#include "test-file.h"
 #include "test-system.h"
-
 
 mpack_tag_t (*fn_mpack_tag_nil)(void) = &mpack_tag_nil;
 
@@ -67,7 +66,7 @@ void test_true_impl(bool result, const char* file, int line, const char* format,
     if (result) {
         ++passes;
     } else {
-        printf("TEST FAILED AT %s:%i --", file, line);
+        printf("TEST FAILED AT %s:%i --  \r\n", file, line);
 
         va_list args;
         va_start(args, format);
@@ -80,8 +79,8 @@ void test_true_impl(bool result, const char* file, int line, const char* format,
     }
 }
 
-int main(void) {
-    printf("\n\n");
+void app_start(int, char**) {
+    printf("App started \r\n");
 
     test_system();
     test_common();
@@ -98,13 +97,9 @@ int main(void) {
     #if MPACK_NODE
     test_node();
     #endif
-    #if MPACK_STDIO
-    test_file();
-    #endif
 
-    test_buffers();
+//    test_buffers();
 
-    printf("\n\nUnit testing complete. %i failures in %i checks.\n\n\n", tests - passes, tests);
-    return (passes == tests) ? EXIT_SUCCESS : EXIT_FAILURE;
+    printf("\n\nUnit testing complete. %i failures in %i checks.\r\n", tests - passes, tests);
 }
 

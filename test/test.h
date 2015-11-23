@@ -35,12 +35,13 @@
 #include <math.h>
 #include <setjmp.h>
 
+
 #ifdef WIN32
 #include <float.h>
 #define isnanf _isnan
 #endif
 
-#ifdef __APPLE__
+#if defined(__APPLE__) || defined(YOTTA_CFG_MBED)
 #define isnanf isnan
 #endif
 

@@ -1,0 +1,8 @@
+{
+  "name": "mpack",
+  "version": "0.0.0",
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {"mbed-drivers": "~0.11.1"}
+}

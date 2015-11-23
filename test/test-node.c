@@ -20,6 +20,7 @@
  */
 
 #include "test-node.h"
+#include "test-system.h"
 
 #if MPACK_NODE
 

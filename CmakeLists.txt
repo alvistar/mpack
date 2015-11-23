@@ -1,0 +1,11 @@
+if(YOTTA_CFG_MBED)
+else(YOTTA_CFG_MBED)
+    cmake_minimum_required(VERSION 3.3)
+    set(CMAKE_C_FLAGS "-Werror -Wextra -Wno-format -std=c11")
+endif(YOTTA_CFG_MBED)
+
+#SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build)
+#SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build)
+#SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build)
+add_subdirectory(src)
+add_subdirectory(test)

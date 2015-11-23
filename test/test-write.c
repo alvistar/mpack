@@ -21,6 +21,7 @@
 
 #include "test-write.h"
 #include "test.h"
+#include "test-system.h"
 
 #if MPACK_WRITER
 
