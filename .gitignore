@@ -29,3 +29,11 @@ xcuserdata/
 # other junk
 .directory
 
+.cproject
+.project
+.yotta.json
+cmake_install.cmake
+.idea
+CMakeCache.txt
+yotta_modules
+yotta_targets

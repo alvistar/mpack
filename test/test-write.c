@@ -368,7 +368,7 @@ static void test_write_basic_structures() {
         "\xdc\x00\x10\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c"
         "\x0d\x0e\x0f"
         );
-
+#ifndef YOTTA_CFG_MBED
     // UINT16_MAX nils
     mpack_writer_init_growable(&writer, &buf, &size);
     mpack_start_array(&writer, UINT16_MAX);
@@ -398,6 +398,7 @@ static void test_write_basic_structures() {
     }
     if (buf)
         MPACK_FREE(buf);
+#endif //YOTTA_CFG_MBED
 
     // {}
     mpack_writer_init_growable(&writer, &buf, &size);
@@ -445,7 +446,7 @@ static void test_write_basic_structures() {
         "\x0d\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c"
         "\x1d\x1e\x1f"
         );
-
+#ifndef YOTTA_CFG_MBED
     // UINT16_MAX nil:nils
     mpack_writer_init_growable(&writer, &buf, &size);
     mpack_start_map(&writer, UINT16_MAX);
@@ -475,6 +476,7 @@ static void test_write_basic_structures() {
     }
     if (buf)
         MPACK_FREE(buf);
+#endif //YOTTA_CFG_MBED
 }
 
 static void test_write_small_structure_trees() {
