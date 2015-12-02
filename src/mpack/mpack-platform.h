@@ -130,7 +130,11 @@
 #endif
 #if MPACK_STDIO
 #include <stdio.h>
+#ifndef YOTTA_CFG_MBED
 #include <errno.h>
+#else //YOTTA_CFG_MBED
+#include "sal-stack-lwip/lwip/include/lwip/arch.h"
+#endif // YOTTA_CFG_MBED
 #endif
 
 
