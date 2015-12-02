@@ -1,6 +1,6 @@
 if(YOTTA_CFG_MBED)
 else(YOTTA_CFG_MBED)
-    cmake_minimum_required(VERSION 3.3)
+    cmake_minimum_required(VERSION 3.2)
     set(CMAKE_C_FLAGS "-Werror -Wextra -Wno-format -std=c11")
 endif(YOTTA_CFG_MBED)
 
