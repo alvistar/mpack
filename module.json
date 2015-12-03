@@ -1,10 +1,10 @@
 {
   "name": "mpack",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MPack - A C encoder/decoder for the MessagePack serialization format / msgpack.org[C]",
   "keywords": ["serialization","messagepack"],
   "homepage": "http://github.com/ARMmbed/yotta",
-  "author": "Nicholas Fraser (https://github.com/ludocode) - Orginal Author ",
+  "author": "Nicholas Fraser (https://github.com/ludocode) - Porting Alessandro Viganò (https://github.com/alvistar)  ",
   "repository": {
     "url": "git@github.com:alvistar/mpack.git",
     "type": "git"
