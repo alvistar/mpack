@@ -14,6 +14,33 @@ The MPack code is small enough to be embedded directly into your codebase. The e
 
 MPack is written in the portable intersection of C99 and C++. In other words, it's written in C99, but if you are stuck using a certain popular compiler from a certain unpopular vendor that refuses to support C99, you can compile it as C++ instead.
 
+### Mbed-OS and CMake
+
+MPack has been ported to [Mbed-OS](http://www.mbed.com).
+
+To enable this project has been ported to Cmake.
+Cmake can be used also for building on other platform (Linux and OSX tested).
+
+#### Building in Mbed
+Building is easy just:
+
+```Shell
+yotta target [yourtarget]
+yotta build
+```
+
+For example target can be "frdm-k64f-gcc" for Freescale Freedom K64F.
+
+A test program that can be flashed on board can be found in build/[yourtarget]/existing/test.
+
+#### Building with CMake for other platforms
+
+```Shell
+mkdir build
+cd build
+cmake ..
+```
+
 ## Build Status
 
 MPack is beta software under development.

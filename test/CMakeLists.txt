@@ -16,7 +16,7 @@ add_executable(mpacktest ${SOURCES})
 target_link_libraries(mpacktest ${LIBRARIES})
 
 if(YOTTA_CFG_MBED)
-	#yotta_postprocess_target(EXECUTABLE mpacktest)
+	yotta_postprocess_target(EXECUTABLE mpacktest)
 	add_test(mpack-test-mpacktest mpacktest)
 	add_dependencies(all_tests mpacktest)
 endif(YOTTA_CFG_MBED)
