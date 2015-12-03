@@ -37,3 +37,4 @@ cmake_install.cmake
 CMakeCache.txt
 yotta_modules
 yotta_targets
+native
